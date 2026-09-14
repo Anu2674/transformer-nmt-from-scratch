@@ -1,0 +1,65 @@
+==============================================================================
+PHASE 6  -  ERROR ANALYSIS  (baseline_s1, rnn, decode=greedy)
+==============================================================================
+Overall test BLEU 29.16   chrF 55.63
+Signature: #:1|c:mixed|e:no|tok:13a|s:exp|v:2.6.0
+
+PERFORMANCE BY SOURCE SENTENCE LENGTH
+  bucket                     n     BLEU     chrF
+  1-10 src words           412    33.38    59.03
+  11-20 src words          551    28.98    55.21
+  21-inf src words          37    14.35    45.44
+
+  -> BLEU drop from shortest to longest bucket: +19.03
+
+GOOD TRANSLATIONS (highest sentence-BLEU)
+  [sentBLEU 100.0]  (8 src words)
+    SRC: A man wearing sunglasses is riding a scooter.
+    REF: Ein Mann mit Sonnenbrille fährt auf einem Roller.
+    HYP: Ein Mann mit Sonnenbrille fährt auf einem Roller.
+
+  [sentBLEU 100.0]  (7 src words)
+    SRC: Two cars are driving on a racetrack.
+    REF: Zwei Autos fahren auf einer Rennstrecke.
+    HYP: Zwei Autos fahren auf einer Rennstrecke.
+
+  [sentBLEU 100.0]  (10 src words)
+    SRC: A woman and a child are walking down a street.
+    REF: Eine Frau und ein Kind gehen eine Straße entlang.
+    HYP: Eine Frau und ein Kind gehen eine Straße entlang.
+
+  [sentBLEU 100.0]  (7 src words)
+    SRC: Three men are cooking in a kitchen.
+    REF: Drei Männer kochen in einer Küche.
+    HYP: Drei Männer kochen in einer Küche.
+
+FAILURE CASES (lowest sentence-BLEU)
+  [sentBLEU 2.1]  (15 src words)
+    SRC: # 8 for Iowa State stiff arms a Texas AM player attempting to tackle him.
+    REF: Die # 8 von Iowa State streckt den Arm in Richtung eines Spielers der Texas AM beim Versuch, ihn zu tackeln.
+    HYP: Eine 8-hanaa Sta-Tren und einen Spieler mit der Aufschrift Spieler einem Spielerhle Spieler.
+    likely cause: lexical / word-choice errors, meaning mostly wrong
+
+  [sentBLEU 2.7]  (22 src words)
+    SRC: Two boys are looking up at the sky and waving theirs arms and they are dressed in clothes to keep them warm.
+    REF: Zwei Jungen in Winterkleidung sehen zum Himmel hoch und winken mit den Armen.
+    HYP: Zwei Jungs gucken sich am Himmel und den den den den Händen und und sind, um sie zu ihnenen.
+    likely cause: long source sentence
+
+  [sentBLEU 2.8]  (14 src words)
+    SRC: While visiting the Mayan ruins, a guide points in the direction of more attractions.
+    REF: Beim Besuch von Maya-Ruinen zeigt ein Führer in Richtung weiterer Sehenswürdigkeiten.
+    HYP: Während der der Mulsineine ist eine Wast auf auf auf dem WA auf.
+    likely cause: lexical / word-choice errors, meaning mostly wrong
+
+  [sentBLEU 2.9]  (18 src words)
+    SRC: There is an outline of a male and female observing a bonfire or other large burning wooden object.
+    REF: Die Silhouette eines Mannes und einer Frau, die ein großes Bonfire oder einen anderen großen, brennenden Holzgegenstand betrachten.
+    HYP: Ein Mann der eine Schuss und ein kleinesbomf oder oder große anderen, der große Objekt aus Holzbend.
+    likely cause: lexical / word-choice errors, meaning mostly wrong
+
+  [sentBLEU 3.0]  (9 src words)
+    SRC: Small orchestra playing with open violin case in front
+    REF: Kleines Orchester spielt im Freien mit einem Gitarrenkoffer auf dem Boden.
+    HYP: Kleinerer spielen vor offenen Kägägä.
+    likely cause: under-translation (hyp much shorter than ref)

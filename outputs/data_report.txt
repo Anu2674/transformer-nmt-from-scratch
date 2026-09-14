@@ -1,0 +1,34 @@
+======================================================================
+PHASE 0  -  MULTI30K (EN-DE) DATA REPORT
+======================================================================
+Dataset : Multi30k (task1) English-German
+Source  : https://github.com/multi30k/dataset
+Tokenizer: SentencePiece BPE, joint En+De  |  vocab = 8000
+
+[TRAIN]  29000 sentence pairs   (<unk> rate 0.0%)
+    EN words   : mean  11.9  median 11.0  max  37  p95  19
+    DE words   : mean 11.12  median 11.0  max  39  p95  18
+    EN subword : mean 14.28  max  48  p95  23
+    DE subword : mean 14.77  max  52  p95  25
+
+[VAL]  1014 sentence pairs   (<unk> rate 0.0%)
+    EN words   : mean  12.0  median 11.0  max  27  p95  19
+    DE words   : mean 11.41  median 11.0  max  30  p95  19
+    EN subword : mean 14.46  max  43  p95  23
+    DE subword : mean 15.31  max  47  p95  25
+
+[TEST]  1000 sentence pairs   (<unk> rate 0.0%)
+    EN words   : mean 11.88  median 11.0  max  32  p95  19
+    DE words   : mean  10.9  median 10.0  max  30  p95  18
+    EN subword : mean 14.18  max  33  p95  23
+    DE subword : mean  14.3  max  39  p95  24
+
+EXAMPLE TRAINING PAIRS
+    EN: Two young, White males are outside near many bushes.
+    DE: Zwei junge weiße Männer sind im Freien in der Nähe vieler Büsche.
+
+    EN: Toddler boy in a red hat holding on to some railings.
+    DE: Männliches Kleinkind in einem roten Hut, das sich an einem Geländer festhält.
+
+    EN: A group of people walking down a trail in the woods.
+    DE: Eine Gruppe geht einen Pfad im Wald hinunter.

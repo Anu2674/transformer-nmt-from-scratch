@@ -1,0 +1,65 @@
+==============================================================================
+PHASE 6  -  ERROR ANALYSIS  (main_s1, transformer, decode=greedy)
+==============================================================================
+Overall test BLEU 35.37   chrF 60.66
+Signature: #:1|c:mixed|e:no|tok:13a|s:exp|v:2.6.0
+
+PERFORMANCE BY SOURCE SENTENCE LENGTH
+  bucket                     n     BLEU     chrF
+  1-10 src words           412    39.74    64.33
+  11-20 src words          551    35.31    60.23
+  21-inf src words          37    18.76    49.46
+
+  -> BLEU drop from shortest to longest bucket: +20.98
+
+GOOD TRANSLATIONS (highest sentence-BLEU)
+  [sentBLEU 100.0]  (7 src words)
+    SRC: Two cars are driving on a racetrack.
+    REF: Zwei Autos fahren auf einer Rennstrecke.
+    HYP: Zwei Autos fahren auf einer Rennstrecke.
+
+  [sentBLEU 100.0]  (10 src words)
+    SRC: A woman and a child are walking down a street.
+    REF: Eine Frau und ein Kind gehen eine Straße entlang.
+    HYP: Eine Frau und ein Kind gehen eine Straße entlang.
+
+  [sentBLEU 100.0]  (9 src words)
+    SRC: A man throws a fishing net into the bay.
+    REF: Ein Mann wirft ein Fischernetz in die Bucht.
+    HYP: Ein Mann wirft ein Fischernetz in die Bucht.
+
+  [sentBLEU 100.0]  (7 src words)
+    SRC: A girl plays in a small pool.
+    REF: Ein Mädchen spielt in einem kleinen Pool.
+    HYP: Ein Mädchen spielt in einem kleinen Pool.
+
+FAILURE CASES (lowest sentence-BLEU)
+  [sentBLEU 2.0]  (15 src words)
+    SRC: # 8 for Iowa State stiff arms a Texas AM player attempting to tackle him.
+    REF: Die # 8 von Iowa State streckt den Arm in Richtung eines Spielers der Texas AM beim Versuch, ihn zu tackeln.
+    HYP: Ein Mowa Ia StowaWetta hält sich einen Spieler der Arme für ihn an.
+    likely cause: lexical / word-choice errors, meaning mostly wrong
+
+  [sentBLEU 2.5]  (15 src words)
+    SRC: The Dali Lama during a reception where participants have brought carnations, parasols and prayer flags.
+    REF: Der Dalai Lama bei einem Empfang, zu dem Besucher Nelken, Schirme und Gebetsfahnen bringen.
+    HYP: Der Malaluch Lama eines Sternixtnummer, wo Tros in Lachen Loli vögenechen verlungenechenkippt und einen Lachen Lachen Lachen Lachen Lachen Lasterechenkippt anstelltechenkippt.
+    likely cause: lexical / word-choice errors, meaning mostly wrong
+
+  [sentBLEU 2.9]  (14 src words)
+    SRC: Three children's legs are shown as they stand near a mess of silly string.
+    REF: Die Beine von drei Kindern, die neben einem Durcheinander verknoteter Fäden stehen.
+    HYP: Drei Kinder werden zu Beinen gezeigt, während sie in der Nähe einer Beschausstunde albernen.
+    likely cause: lexical / word-choice errors, meaning mostly wrong
+
+  [sentBLEU 3.0]  (10 src words)
+    SRC: An Oriental traveler awaits his turn at the currency exchange.
+    REF: Ein orientalischer Reisender wartet am Wechselschalter bis er dran ist.
+    HYP: Ein orientalisch aussehender Schafter wartet, bis die Kurve am Kurve sind, wo die wahrschfahrgeflich probt sind.
+    likely cause: lexical / word-choice errors, meaning mostly wrong
+
+  [sentBLEU 3.2]  (11 src words)
+    SRC: Two silhouetted people paddle a canoe on the ocean during sunset.
+    REF: Zwei Silhouetten paddeln in einem Kanu auf dem Ozean bei Sonnenuntergang.
+    HYP: Zwei als Silhouette sich umscharfe Menschen, die kurz davor, über den Ozean liegt.
+    likely cause: lexical / word-choice errors, meaning mostly wrong

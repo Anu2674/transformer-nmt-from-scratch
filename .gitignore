@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Project virtual environment
+.venv/
+
+# Trained model weights (large binary files, not suited to a git repository)
+checkpoints/
+
+# Transient process artifacts from background training runs
+logs/*.pid
+logs/*.stdout.log
+logs/*.stdout2.log
+logs/*.stderr.log
+logs/*.stderr2.log
+
+# OS-level files
+Thumbs.db
+.DS_Store

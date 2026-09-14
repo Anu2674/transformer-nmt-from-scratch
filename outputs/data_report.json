@@ -1,0 +1,126 @@
+{
+  "dataset": "Multi30k (task1) English-German",
+  "source": "https://github.com/multi30k/dataset",
+  "tokenizer": {
+    "type": "SentencePiece BPE, joint En+De",
+    "vocab_size": 8000,
+    "special_ids": {
+      "pad": 0,
+      "unk": 1,
+      "bos": 2,
+      "eos": 3
+    }
+  },
+  "splits": {
+    "train": {
+      "pairs": 29000,
+      "en_words": {
+        "min": 3,
+        "max": 37,
+        "mean": 11.9,
+        "median": 11.0,
+        "p95": 19
+      },
+      "de_words": {
+        "min": 1,
+        "max": 39,
+        "mean": 11.12,
+        "median": 11.0,
+        "p95": 18
+      },
+      "en_subwords": {
+        "min": 4,
+        "max": 48,
+        "mean": 14.28,
+        "median": 13.0,
+        "p95": 23
+      },
+      "de_subwords": {
+        "min": 3,
+        "max": 52,
+        "mean": 14.77,
+        "median": 14.0,
+        "p95": 25
+      },
+      "unk_rate_pct": 0.0
+    },
+    "val": {
+      "pairs": 1014,
+      "en_words": {
+        "min": 4,
+        "max": 27,
+        "mean": 12.0,
+        "median": 11.0,
+        "p95": 19
+      },
+      "de_words": {
+        "min": 3,
+        "max": 30,
+        "mean": 11.41,
+        "median": 11.0,
+        "p95": 19
+      },
+      "en_subwords": {
+        "min": 5,
+        "max": 43,
+        "mean": 14.46,
+        "median": 14.0,
+        "p95": 23
+      },
+      "de_subwords": {
+        "min": 4,
+        "max": 47,
+        "mean": 15.31,
+        "median": 14.0,
+        "p95": 25
+      },
+      "unk_rate_pct": 0.0
+    },
+    "test": {
+      "pairs": 1000,
+      "en_words": {
+        "min": 4,
+        "max": 32,
+        "mean": 11.88,
+        "median": 11.0,
+        "p95": 19
+      },
+      "de_words": {
+        "min": 4,
+        "max": 30,
+        "mean": 10.9,
+        "median": 10.0,
+        "p95": 18
+      },
+      "en_subwords": {
+        "min": 5,
+        "max": 33,
+        "mean": 14.18,
+        "median": 13.0,
+        "p95": 23
+      },
+      "de_subwords": {
+        "min": 5,
+        "max": 39,
+        "mean": 14.3,
+        "median": 13.0,
+        "p95": 24
+      },
+      "unk_rate_pct": 0.0
+    }
+  },
+  "example_pairs": [
+    {
+      "en": "Two young, White males are outside near many bushes.",
+      "de": "Zwei junge weiße Männer sind im Freien in der Nähe vieler Büsche."
+    },
+    {
+      "en": "Toddler boy in a red hat holding on to some railings.",
+      "de": "Männliches Kleinkind in einem roten Hut, das sich an einem Geländer festhält."
+    },
+    {
+      "en": "A group of people walking down a trail in the woods.",
+      "de": "Eine Gruppe geht einen Pfad im Wald hinunter."
+    }
+  ]
+}

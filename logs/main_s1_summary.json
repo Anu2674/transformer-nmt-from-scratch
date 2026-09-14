@@ -1,0 +1,28 @@
+{
+  "tag": "main_s1",
+  "model": "transformer",
+  "seed": 1,
+  "n_params": 7578624,
+  "best_val_bleu": 36.73,
+  "best_epoch": 30,
+  "epochs_run": 40,
+  "train_time_min": 329.7,
+  "device": "cuda",
+  "amp": true,
+  "hparams": {
+    "batch_size": 128,
+    "accum": 1,
+    "d_model": 256,
+    "layers": 3,
+    "heads": 8,
+    "d_ff": 1024,
+    "dropout": 0.1,
+    "warmup": 2000,
+    "lr_factor": 1.0,
+    "rnn_lr": 0.0007,
+    "label_smoothing": 0.1,
+    "clip": 1.0,
+    "patience": 10,
+    "epochs": 45
+  }
+}

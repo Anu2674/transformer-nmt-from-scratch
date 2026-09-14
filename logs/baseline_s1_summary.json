@@ -1,0 +1,28 @@
+{
+  "tag": "baseline_s1",
+  "model": "rnn",
+  "seed": 1,
+  "n_params": 24873280,
+  "best_val_bleu": 30.4,
+  "best_epoch": 26,
+  "epochs_run": 30,
+  "train_time_min": 97.9,
+  "device": "cuda",
+  "amp": true,
+  "hparams": {
+    "batch_size": 64,
+    "accum": 1,
+    "d_model": 256,
+    "layers": 3,
+    "heads": 8,
+    "d_ff": 1024,
+    "dropout": 0.1,
+    "warmup": 2000,
+    "lr_factor": 1.0,
+    "rnn_lr": 0.0007,
+    "label_smoothing": 0.1,
+    "clip": 1.0,
+    "patience": 8,
+    "epochs": 30
+  }
+}

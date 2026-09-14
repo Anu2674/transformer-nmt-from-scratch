@@ -1,0 +1,56 @@
+{
+  "rows": [
+    {
+      "tag": "baseline_s1",
+      "model": "rnn",
+      "seed": 1,
+      "params": 24873280,
+      "decoder": "greedy",
+      "test_bleu": 29.16,
+      "test_chrf": 55.63,
+      "val_bleu": 30.4,
+      "best_epoch": 26,
+      "train_min": 97.9,
+      "bleu_sig": "#:1|c:mixed|e:no|tok:13a|s:exp|v:2.6.0"
+    },
+    {
+      "tag": "main_s1",
+      "model": "transformer",
+      "seed": 1,
+      "params": 7578624,
+      "decoder": "greedy",
+      "test_bleu": 35.37,
+      "test_chrf": 60.66,
+      "val_bleu": 36.73,
+      "best_epoch": 30,
+      "train_min": 329.7,
+      "bleu_sig": "#:1|c:mixed|e:no|tok:13a|s:exp|v:2.6.0"
+    },
+    {
+      "tag": "main_s2",
+      "model": "transformer",
+      "seed": 2,
+      "params": 7578624,
+      "decoder": "greedy",
+      "test_bleu": 35.98,
+      "test_chrf": 60.95,
+      "val_bleu": 37.07,
+      "best_epoch": 28,
+      "train_min": 21.0,
+      "bleu_sig": "#:1|c:mixed|e:no|tok:13a|s:exp|v:2.6.0"
+    }
+  ],
+  "main_transformer_across_seeds": {
+    "n_seeds": 2,
+    "seeds": [
+      1,
+      2
+    ],
+    "bleu_mean": 35.67,
+    "bleu_std": 0.3,
+    "bleu_min": 35.37,
+    "bleu_max": 35.98,
+    "chrf_mean": 60.8,
+    "chrf_std": 0.15
+  }
+}

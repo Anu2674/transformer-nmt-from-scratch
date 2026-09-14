@@ -1,0 +1,8 @@
+# Neural Machine Translation Transformer from scratch -- Multi30k En-De
+# Python 3.13, Windows. GPU build of torch is required for training as run here.
+torch==2.6.0+cu124            # install: pip install torch==2.6.0+cu124 --index-url https://download.pytorch.org/whl/cu124
+sacrebleu==2.6.0
+sentencepiece==0.2.2
+matplotlib==3.10.5
+numpy==2.3.5
+tqdm==4.67.1
